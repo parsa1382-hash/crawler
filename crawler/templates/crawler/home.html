@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'crawler/st.css' %}">
+</head>
+
+<body>
+	<div class="mid">
+		<table>
+			<tr>
+				<th>date</th>
+				<th>first</th>
+				<th>high</th>
+				<th>low</th>
+				<th>close</th>
+			</tr>
+
+			{% for i in data %}
+				<tr>
+					{% for j in i %}
+						<td>{{ j }}</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+			
+		</table>
+	</div>
+		
+</body>
+</html>
